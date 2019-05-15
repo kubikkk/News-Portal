@@ -17,7 +17,7 @@ use Faker\Factory;
  */
 class FakePostPageService implements PostPageServiceInterface
 {
-    public function getPostPage(int $id)
+    public function getPostPage(int $id):PostPage
     {
         $faker=Factory::create();
         $category= new PostCategory($faker->word);

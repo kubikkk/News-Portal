@@ -7,10 +7,12 @@
 
 namespace App\Service\PostPage;
 
+use App\Model\PostPage;
+
 /**
  * Interface PostPageServiceInterface
  */
 interface PostPageServiceInterface
 {
-    public function getPostPage(int $id);
+    public function getPostPage(int $id):PostPage;
 }
