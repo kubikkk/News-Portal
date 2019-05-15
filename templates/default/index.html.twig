@@ -8,11 +8,11 @@
     <div class="container">
         <section class="top-posts">
             <article class="main-post top-post">
-                <a href="#" class="category-link">World</a>
+                <a href="" class="category-link">World</a>
                 <a href="#">
                     <img src="{{ asset('img/default.png') }}" alt="" class="img-fluid">
                 </a>
-                <a href="#" class="post-link">
+                <a href="" class="post-link">
                     <h1>Lorem ipsum dolor</h1>
                 </a>
                 <time>1 minute ago</time>
@@ -68,8 +68,8 @@
         <section class="regular-posts">
         {% for post in posts %}
             <article class="post">
-                <a href="{post.id}" class="category-link">{{ post.category.name }}</a>
-                <a href="#"><h4>{{ post.title }}</h4></a>
+                <a href="post/{{ post.id}}" class="category-link">{{ post.category.name }}</a>
+                <a href="post/{{ post.id}}"><h4>{{ post.title }}</h4></a>
                 <time>{{ post.publicationDate | date('d-m-Y H:i') }}</time>
             </article>
         {% endfor %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h6>POST ID is {{ post.id}}  date publication {{ post.PublicationDate.format('d-m-Y') }}</h6>
+    <h1>{{ post.title}}</h1>
+    <br>
+    <h3>Category Post is:{{ post.category.name }}</h3>
+    <hr>
+    <i>{{  post.description }}</i>
+    <br>
+{% endblock %}

@@ -2,5 +2,6 @@ index:
     path: /
     controller: App\Controller\DefaultController::index
 post_page:
-    path: /postPage/{id}
-    controller: App\Controller\PostPageController::postPage
+    path: /post/{id}
+    controller: App\Controller\PostPageController::post
+
