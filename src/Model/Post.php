@@ -17,7 +17,7 @@ final class Post
     private $shortDescription;
     private $image;
     private $publicationDate;
-    
+    private $description;
     public function __construct(int $id, Category $category, string $title)
     {
         $this->id = $id;
@@ -72,6 +72,24 @@ final class Post
     public function setPublicationDate(\DateTime $date): self
     {
         $this->publicationDate = $date;
+
+        return $this;
+    }
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
 
         return $this;
     }

@@ -7,24 +7,28 @@
 
 namespace App\Service\PostPage;
 
-use App\Model\PostCategory;
-use App\Model\PostPage;
+use App\Model\Category;
+use App\Model\Post;
+
+
 
 use Faker\Factory;
 
 /**
- * Class FakePostPageService Create Fake post page
+ * Class FakePostPageService Create Fake data on post page
+ *
+ * @author Anton Kubrak <ljustpewpewl@gmail.com>
  */
 class FakePostPageService implements PostPageServiceInterface
 {
-    public function getPostPage(int $id):PostPage
+    public function getPostPage(int $id): Post
     {
         $faker=Factory::create();
-        $category= new PostCategory($faker->word);
-        $post= new PostPage(
+        $category= new Category($faker->word);
+        $post= new Post(
             $id,
-            $faker->sentence,
-            $category
+            $category,
+            $faker->sentence
         );
         $post
             ->setDescription($faker->text())

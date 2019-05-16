@@ -12,11 +12,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Class PostPageController
+ * Controller view post data on post page
+ *
+ * @author Anton Kubrak <ljustpewpewl@gmail.com>
  */
-class PostPageController extends AbstractController
+class PostController extends AbstractController
 {
-    public function post(PostPageServiceInterface $postPageService, int $id): Response
+    public function view(PostPageServiceInterface $postPageService, int $id): Response
     {
         $post = $postPageService->getPostPage($id);
 

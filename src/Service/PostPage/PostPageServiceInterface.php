@@ -7,12 +7,14 @@
 
 namespace App\Service\PostPage;
 
-use App\Model\PostPage;
+use App\Model\Post;
 
 /**
- * Interface PostPageServiceInterface
+ * Interface for get post data by id
+ *
+ * @author Anton Kubrak <ljuustpewpewl@gmail.com
  */
 interface PostPageServiceInterface
 {
-    public function getPostPage(int $id):PostPage;
+    public function getPostPage(int $id): Post;
 }

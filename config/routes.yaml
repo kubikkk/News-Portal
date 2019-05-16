@@ -1,7 +1,7 @@
 index:
     path: /
     controller: App\Controller\DefaultController::index
-post_page:
+post_view:
     path: /post/{id}
-    controller: App\Controller\PostPageController::post
+    controller: App\Controller\PostController::view
 
